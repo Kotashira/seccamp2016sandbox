@@ -1,0 +1,11 @@
+config SECURITY_POLE
+	bool "test Linux Security Module Pole"
+	depends on SECURITY
+	depends on SECCOMP
+	depends on BPF
+	depends on BPF_SYSCALL
+	select SECURITY_PATH
+	default y
+	help
+		test Linux Security Module Pole
+

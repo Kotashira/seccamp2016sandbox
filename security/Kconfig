@@ -123,6 +123,7 @@ source security/smack/Kconfig
 source security/tomoyo/Kconfig
 source security/apparmor/Kconfig
 source security/yama/Kconfig
+source security/pole/Kconfig
 
 source security/integrity/Kconfig
 
@@ -132,6 +133,7 @@ choice
 	default DEFAULT_SECURITY_SMACK if SECURITY_SMACK
 	default DEFAULT_SECURITY_TOMOYO if SECURITY_TOMOYO
 	default DEFAULT_SECURITY_APPARMOR if SECURITY_APPARMOR
+	default DEFAULT_SECURITY_POLE if SECURITY_POLE
 	default DEFAULT_SECURITY_DAC
 
 	help
@@ -143,6 +145,9 @@ choice
 
 	config DEFAULT_SECURITY_SMACK
 		bool "Simplified Mandatory Access Control" if SECURITY_SMACK=y
+
+	config DEFAULT_SECURITY_POLE
+		bool "test Linux Security Module Pole" if SECURITY_POLE=y
 
 	config DEFAULT_SECURITY_TOMOYO
 		bool "TOMOYO" if SECURITY_TOMOYO=y
@@ -159,6 +164,7 @@ config DEFAULT_SECURITY
 	string
 	default "selinux" if DEFAULT_SECURITY_SELINUX
 	default "smack" if DEFAULT_SECURITY_SMACK
+	default "smack" if DEFAULT_SECURITY_POLE
 	default "tomoyo" if DEFAULT_SECURITY_TOMOYO
 	default "apparmor" if DEFAULT_SECURITY_APPARMOR
 	default "" if DEFAULT_SECURITY_DAC
