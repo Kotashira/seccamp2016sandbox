@@ -2,7 +2,7 @@ VERSION = 4
 PATCHLEVEL = 6
 SUBLEVEL = 3
 EXTRAVERSION =
-NAME = Charred Weasel
+NAME = totem
 
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
