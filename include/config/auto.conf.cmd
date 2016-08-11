@@ -19,6 +19,7 @@ deps_config := \
 	security/integrity/evm/Kconfig \
 	security/integrity/ima/Kconfig \
 	security/integrity/Kconfig \
+	security/pole/Kconfig \
 	security/yama/Kconfig \
 	security/apparmor/Kconfig \
 	security/tomoyo/Kconfig \
